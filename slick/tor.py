@@ -1,9 +1,8 @@
 import os
-import logging
 import asyncio
 from stem.control import Controller
 import stem.process
-from stem.util import term, log
+from stem.util import log
 from random import randint
 from slick.logger import logger
 

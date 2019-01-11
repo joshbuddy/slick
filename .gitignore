@@ -5,3 +5,4 @@
 .DS_Store
 /slick_app.egg-info
 /TODO.md
+/.env*

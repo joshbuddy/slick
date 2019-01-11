@@ -13,7 +13,6 @@ from prompt_toolkit.validation import Validator, ValidationError
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit import print_formatted_text
-from slick.logger import logger
 from slick.server import FriendRequest
 from slick.discovery import Nearby
 from slick.bencode import File

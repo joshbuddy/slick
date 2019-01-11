@@ -1,12 +1,10 @@
 import os
 import ssl
-import aiohttp
 import uuid
 import json
 import hashlib
 import asyncio
 from aiohttp import web
-from nacl.public import PrivateKey, SealedBox
 from cryptography import x509
 from cryptography.x509.oid import ExtensionOID
 from cryptography.hazmat.backends import default_backend

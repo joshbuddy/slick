@@ -1,25 +1,15 @@
-import math
-import base64
 import socket
 import aiohttp
 import asyncio
 import hashlib
-import netifaces
-import json
-import base64
 from typing import cast
-from aiohttp.client_exceptions import ServerTimeoutError
 from aiozeroconf import ServiceBrowser, ServiceStateChange, Zeroconf, ServiceInfo
 from aiohttp_socks import SocksConnector
-from cryptography import x509
-from cryptography.x509.oid import ExtensionOID
-from cryptography.hazmat.backends import default_backend
 from ordered_set import OrderedSet
 from nacl.public import SealedBox, PublicKey
 
-from slick.friend import Friend
-from slick.logger import logger
 from slick.server import FriendRequest
+from slick.logger import logger
 from slick.bencode import Request
 
 

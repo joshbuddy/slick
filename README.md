@@ -62,3 +62,8 @@ The **certificate server** uses HTTP, and expects data encoded with the public k
 3. The NaCL public key of the user requesting access
 
 Once both parties mutually accept the certificates, then communication is performed over the **talk server**. The talk server is made available as an onion service. The address for this onion service is encoded in the certificate. HTTPS with mutual TLS is used to identity and authenticate users.
+
+### Limitations
+
+* Can't exchange keys without being on the same network
+* An adversarial local network could MitM the key exchange, and unless certificate digests are compared, could compromise the key exchange

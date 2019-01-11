@@ -1,4 +1,3 @@
-import os
 import json
 import math
 import asyncio
@@ -6,7 +5,6 @@ import hashlib
 import aiofiles
 import base64
 from tqdm import tqdm
-from datetime import datetime
 from aiofile import AIOFile
 from slick.connection import TorConnection, DirectConnection
 from slick.logger import logger

@@ -1,5 +1,4 @@
 import os
-from os.path import expanduser
 from slick.friend import Friend
 from slick.logger import logger
 
@@ -11,6 +10,7 @@ class FriendList:
         self._friends = []
 
     async def start(self):
+        logger.debug("loading friend list")
         os.makedirs(self.friend_dir, exist_ok=True)
         friend_list = os.listdir(self.friend_dir)
         for f in friend_list:
