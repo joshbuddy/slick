@@ -1,6 +1,5 @@
 import os
 import ssl
-import json
 import aiohttp
 import asyncio
 import filetype
@@ -35,7 +34,7 @@ class BaseConnection:
                 self.active = False
                 self.connect_task = asyncio.ensure_future(self._connect())
                 await self.connect_task
-        except asyncio.CancelledError as e:
+        except asyncio.CancelledError:
             logger.debug("re-connecting...")
         except Exception as e:
             logger.exception(e)
@@ -90,7 +89,7 @@ class BaseConnection:
             mimetype = ft.mime if ft else "application/octet-stream"
             stat = os.stat(abspath)
             data = File.encode(
-                {"url": url, "size": stat.st_size, "type": ft.mime, "name": name}
+                {"url": url, "size": stat.st_size, "type": mimetype, "name": name}
             )
             async with self.session.post(
                 f"https://{self.host}/",

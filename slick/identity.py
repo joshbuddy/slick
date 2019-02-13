@@ -2,12 +2,8 @@ import asyncio
 import base64
 import os
 import json
-import names
-import hashlib
 from nacl.public import PrivateKey, SealedBox
-from nacl.signing import SigningKey
 from slick.util import find_free_port
-from slick.logger import logger
 from slick.bencode import Request
 
 
